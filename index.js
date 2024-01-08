@@ -13,12 +13,7 @@ const port = 5000;
 app.set("view engine", "ejs");
 app.set("views", join(__dirname, "views"));
 
-app.use(
-  cors({
-    origin: "*",
-    credentials: true,
-  })
-);
+app.use(cors());
 app.get("/", (req, res) => {
   res.send("Server is up and running!");
 });
